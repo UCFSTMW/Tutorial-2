@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
         rd2d = GetComponent<Rigidbody2D>();
         score.text = scoreValue.ToString();
         lives.text = livesValue.ToString();
-        Textscore();
+        textScore();
         winText.text = "";
         musicSource.clip = musicClipOne;
           musicSource.Play();
@@ -90,7 +90,7 @@ else if (facingRight == true && hozMovement < 0)
             scoreValue += 1;
             score.text = scoreValue.ToString();
             Destroy(collision.collider.gameObject);
-            Textscore();
+            textScore();
             
         }
 
@@ -99,7 +99,7 @@ else if (facingRight == true && hozMovement < 0)
             livesValue -= 1;
             lives.text = livesValue.ToString();
             Destroy(collision.collider.gameObject);
-            Textscore();
+            textScore();
 
         }
 
@@ -117,7 +117,7 @@ else if (facingRight == true && hozMovement < 0)
         }
     }
        
-       void Textscore() 
+       void textScore() 
 
     { 
         if (scoreValue == 4 )
@@ -127,7 +127,7 @@ else if (facingRight == true && hozMovement < 0)
 
            livesValue = 3;
            lives.text = livesValue.ToString();
-           Textscore();
+           
 
        } 
 
